@@ -1,0 +1,6 @@
+{$PGWEB_ADDRESS} {
+	basicauth {
+		{$PGWEB_BASICAUTH_USER} {$PGWEB_BASICAUTH_PASSWORD}
+	}
+	reverse_proxy pgweb:8081
+}
