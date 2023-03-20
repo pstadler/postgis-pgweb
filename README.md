@@ -1,3 +1,3 @@
 # Disposable PostGIS setup using Pgweb and Caddy
 
-For my own convenience.
+This could have been a gist. Oh my!
