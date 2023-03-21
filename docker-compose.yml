@@ -7,7 +7,9 @@ services:
     environment:
       - PGWEB_ADDRESS=foo.example.org
       - PGWEB_BASICAUTH_USER=admin
-      - PGWEB_BASICAUTH_PASSWORD=$$2a$$14$$fZMO2Xnas8NCZRyJRq80/.JH74PTmP0GKZjkUo8E4HZDRO/cBGnGy
+      # create password hash and replace '$' with '$$' to be used within docker-compose.yml
+      # caddy hash-password --plaintext test | sed 's/\$/\$\$/g'
+      - PGWEB_BASICAUTH_PASSWORD=$$2a$$14$$WICUKEnffdAuMYMaSpbs1.iiBQ0blWcxJmtvsOqOL3C7Qc01VBTIG
     ports:
       - "443:443"
       - "80:80"
